@@ -1,7 +1,5 @@
 $(window).load(function() {
 	
-	//$('body').hide().fadeIn(1000);
-	
     FastClick.attach(document.body);
 	
 	$(window).scroll(function(i){
@@ -128,15 +126,15 @@ $(window).load(function() {
 		  });
 		});
 
-	if ($('body').hasClass('.startpage')) {
-		return 0;
-	} else {
+	if ($('body').hasClass('contentpage')) {
 		$('.tooltip').tooltipster({
 			touchDevices: false,
 			animation: 'swing',
 			position: 'bottom',
 			speed: '200'
 		});
+	} else {
+		return 0;
 	}
 
     // LOGOUT
