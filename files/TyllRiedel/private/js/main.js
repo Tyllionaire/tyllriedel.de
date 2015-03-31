@@ -72,8 +72,8 @@ $(window).load(function() {
 //	image_array[12] = "/files/TyllRiedel/private/img/BG-13.jpg";
 //	image_array[13] = "/files/TyllRiedel/private/img/BG-14.jpg";
 //	image_array[14] = "/files/TyllRiedel/private/img/BG-15.jpg";
-//	image_array[0] = "/files/TyllRiedel/private/img/IMG_1784.jpg";
-	image_array[0] = "/files/TyllRiedel/private/img/IMG_5623_green.jpg";
+	image_array[0] = "/files/TyllRiedel/private/img/IMG_1784.jpg";
+//	image_array[0] = "/files/TyllRiedel/private/img/IMG_5623_green.jpg";
 	
 	var rand_path = image_array[Math.floor(Math.random() * image_array.length)];
 	
