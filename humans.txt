@@ -1,0 +1,19 @@
+/* TEAM */
+
+	Designer, Developer and Owner: Tyll Riedel
+	Contact: info [at] tyllriedel.de
+	From: Frankfurt (Main), Germany
+	
+
+/* THANKS */
+
+	Everyone who was/is involved!
+		
+
+/* SITE */
+	Last update:2015/03/31
+	Language: Deutsch / English
+	Doctype: HTML5
+	Standards: HTML5, CSS3 (SASS), JS, PHP
+	Framework: Bootstrap
+	Components: jQuery, Modernizr, Tooltipster, FastClick, shuffle.js, unveil.js
