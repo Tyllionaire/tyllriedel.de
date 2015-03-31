@@ -1,0 +1,23 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.project
+
+# Wordpress Core Files #
+###################
+.htaccess
+.htaccess.default
+.htpasswd
+contao/
+system/
+share/
+assets/
+templates/music_academy.sql
+ajax.php
+index.php

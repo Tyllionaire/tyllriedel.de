@@ -1,0 +1,39 @@
+
+<!-- indexer::stop -->
+<div class="<?php echo $this->class; ?> one_column tableless login block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+	
+	<h2 class="more--projects">WEITERE PROJEKTE</h2>
+	
+  <?php if ($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+  <?php endif; ?>
+
+  <form<?php if ($this->action): ?> action="<?php echo $this->action; ?>"<?php endif; ?> id="tl_login" method="post">
+    <div class="login-wrap formbody">
+      <?php if ($this->message): ?>
+        <p class="error"><?php echo $this->message; ?></p>
+      <?php endif; ?>
+      <input type="hidden" name="FORM_SUBMIT" value="tl_login">
+      <input type="hidden" name="REQUEST_TOKEN" value="{{request_token}}">
+      <span class="input input--yoko" style="display: none;">
+      	<input type="text" name="username" id="username" class="text input__field input__field--yoko" value="Portfolio">
+      	<label for="username" class="input__label input__label--yoko"><span class="input__label-content input__label-content--yoko"><?php echo $this->username; ?></span></label>
+      </span>
+      <br>
+      <span class="input input--yoko">
+      <input type="password" name="password" id="password" class="text password input__field input__field--yoko" value="">
+      <label for="password" class="input__label input__label--yoko"><span class="input__label-content input__label-content--yoko"><?php echo $this->password; ?></span></label>
+      </span>
+      <?php if ($this->autologin): ?>
+        <div class="checkbox_container">
+          <input type="checkbox" name="autologin" id="autologin" value="1" class="checkbox"> <label for="autologin"><?php echo $this->autoLabel; ?></label>
+        </div>
+      <?php endif; ?>
+      <div class="submit_container">
+        <button type="submit" class="submit login" value="<?php echo $this->slabel; ?>">
+      </div>
+    </div>
+  </form>
+
+</div>
+<!-- indexer::continue -->

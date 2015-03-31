@@ -1,0 +1,14 @@
+<!-- rsce_boxes.html5 -->
+<div class="iFrame--content">
+	<?php foreach ($this->boxes as $box): ?>
+		<iframe style="border: 1px solid #aeaeae;" src="<?php echo $box->Link; ?>"
+		width="<?php echo $box->Width; ?>px" height="<?php echo $box->Height; ?>px" name="<?php echo $box->Name; ?>" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">
+		
+		  <p>Ihr Browser kann leider keine eingebetteten Frames anzeigen.<br>
+		  <a href="http://www.tyllriedel.de">ZurŸck zur Startseite</a>
+		  </p>
+		
+		</iframe>
+		<h2>Statischer Inhalt!<br>Sorry, hier ist statischer Inhalt mit einer festen Gr&ouml;&szlig;e eingebunden. Um Das Projekt anschauen zu k&ouml;nnen wechsle bitte an ein Ger&auml;t mit einem gr&ouml;&szlig;eren Display.<h2>
+	<?php endforeach ?>
+</div>

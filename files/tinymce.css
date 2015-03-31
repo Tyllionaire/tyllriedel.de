@@ -1,0 +1,41 @@
+/**
+ * Global TinyMCE style sheet
+ *
+ * Use this style sheet to define CSS classes for the rich text editor. The
+ * stlye sheet will be included in the editor and the page layout automatically.
+ * Although the stlye sheet is shared by all themes, you can override its
+ * formattings in any of your theme style sheets.
+ *
+ *   files/tinymce.css (this is how it looks like in TinyMCE)
+ *   .warning { color:#c55; }
+ *
+ *   theme_a.css (this is how it looks like in theme A)
+ *   .warning { font-weight:bold; }
+ *
+ *   theme_b.css (this is how it looks like in theme B)
+ *   .warning { color:#000; }
+ *
+ * If you do not want to use a global TinyMCE style sheet at all, simply delete
+ * this file (files/tinymce.css).
+ */
+.highlight {background-color:#dbbfb3; color: #FFFFFF; padding: 0 5px;}
+.highlight2 {color: #00FF00;}
+.line {color: #00FF00; font-weight: 700; font-size: 2em;}
+/*
+.instagram {background-color:#4B789E; color: #FFFFFF; padding: 0 5px;}
+.facebook {background-color:#3b5998; color: #FFFFFF; padding: 0 5px;}
+.vimeo {background-color:#44BBFF; color: #FFFFFF; padding: 0 5px;}
+.xing {background-color:#006464; color: #FFFFFF; padding: 0 5px;} */
+.vita-datum{
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: $color-highlight;
+}
+.vita-position{
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+}
+.vita-location{}
