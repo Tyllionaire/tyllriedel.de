@@ -2,23 +2,23 @@
 ######################
 .DS_Store
 .DS_Store?
-._*
 .Spotlight-V100
 .Trashes
 ehthumbs.db
 Thumbs.db
 .project
 
-# Wordpress Core Files #
-###################
+# Contao Core Files #
+#####################
 .htaccess
 .htaccess.default
 .htpasswd
 contao/
 system/
 share/
-files/TyllRiedel/uploads
 assets/
+!files/TyllRiedel/private
+files/TyllRiedel/uploads
 templates/music_academy.sql
 ajax.php
 index.php
