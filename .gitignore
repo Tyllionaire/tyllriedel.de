@@ -17,7 +17,7 @@ contao/
 system/
 share/
 assets/
-!files/TyllRiedel/private
+!files/TyllRiedel/private/compass/assets
 files/TyllRiedel/uploads
 templates/music_academy.sql
 ajax.php
