@@ -17,6 +17,7 @@ Thumbs.db
 contao/
 system/
 share/
+files/TyllRiedel/uploads
 assets/
 templates/music_academy.sql
 ajax.php
