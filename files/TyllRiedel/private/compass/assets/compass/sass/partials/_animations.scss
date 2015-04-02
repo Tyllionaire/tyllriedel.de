@@ -1,0 +1,57 @@
+@-webkit-keyframes NAME {
+  0% {
+    top: 0px;
+  }
+  10% {
+    top: 10px;
+  }
+  20% {
+    top: 0px;
+  }
+  35% {
+    top: 10px;
+  }
+  45% {
+    top: 0px;
+  }
+100% {
+    top: 0px;
+  }
+}
+@keyframes NAME {
+  0% {
+    top: 0px;
+  }
+  10% {
+    top: 10px;
+  }
+  20% {
+    top: 0px;
+  }
+  35% {
+    top: 10px;
+  }
+  45% {
+    top: 0px;
+  }
+100% {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes FADE {
+  0% {
+    opacity: 0;
+  }
+100% {
+    opacity: 1;
+  }
+}
+@keyframes FADE {
+  0% {
+    opacity: 0;
+  }
+100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,288 @@
+/* Font Awesome*/
+  @font-face {
+    font-family: 'tyllriedel-2';
+    src: url('../../../fonts/tyllriedel-2.eot');
+    src: url('../../../fonts/tyllriedel-2.eot?#iefix') format('embedded-opentype'),
+    url('../../../fonts/tyllriedel-2.woff') format('woff'),
+    url('../../../fonts/tyllriedel-2.ttf') format('truetype'),
+    url('../../../fonts/tyllriedel-2.svgz#tyllriedel-2') format('svg'),
+    url('../../../fonts/tyllriedel-2.svg#tyllriedel-2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@mixin icon-links {
+  .link-grid,
+  .link-info,
+  .link-arrow,
+  .totop,
+  .prev,
+  .next,
+  .submit
+ /* #filter .web,
+  #filter .video,
+  #filter .all,
+  #filter .photo*/ {
+    font-family: 'tyllriedel-2';
+    font-weight: normal;
+    color: $color-grey;
+    font-size:2em;
+    &:before {
+      &:hover {
+        &:hover {
+          color: $color-highlight;
+        }
+      }
+    }
+  }
+  
+ /* #filter {
+    .all {&:before {content: '\e103';}}
+    .video {&:before {content: '\e018';}}
+    .photo {&:before {content: '\e017';}}
+    .web {&:before {content: '\e021';}}
+  } 
+  */
+  .link-arrow {
+    &:before {
+      content: '\e097';
+    }
+  }
+  
+  .link-grid {
+    &:before {
+      content: '\e094';
+    }
+  }
+  
+  .link-info {
+    &:before {
+      content: '\e601';
+    }
+  }
+
+  .prev {
+    &:before {
+      content: '\e094';
+    }
+  }
+
+  .next {
+    &:after {
+      content: '\e095';
+    }
+  }
+  
+  .totop a {
+      font-size: 0.75em;
+    &:before {
+      content: '\e096';
+    }
+  }
+  
+  .submit {
+    &.close {
+      &:after {
+        content: '\e603';
+        color: $color-highlight-dark;
+      }
+    }
+    &.login {
+      &:after {
+        //position: absolute;
+        content: '\e095';
+        color: $color-highlight-dark;
+      }
+    }
+  }
+  
+  .vita-location {
+    &:before {
+      font-family: 'tyllriedel-2';
+      font-size: 1em;
+      position: relative;
+      top: 1px;
+      padding: 0 3px 0 0;
+      content: '\e077';
+      color: $color-highlight;
+    }
+  }
+}
+
+@mixin main-font {
+  font-family: 'Lato', Sans-Serif;
+}
+
+/* rotate */
+@mixin rotate($deg: 30deg) {
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+/* border 5px */
+@mixin border($color) {
+  border:solid 1px $color;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright:5px;
+  -moz-border-radius-bottomleft:5px;
+  -moz-border-radius-bottomright:5px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+  -webkit-border-bottom-left-radius:5px;
+  -webkit-border-bottom-right-radius:5px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+}
+
+/* clearfix */
+@mixin clearfix {
+  display: inline-block;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  * html & { height: 1px }
+}
+
+//font
+@mixin DroidSans {
+  font-family: 'Droid Sans', Helvetica, Arial, Sans-Serif;
+}
+
+@mixin Roboto {
+  font-family: 'Roboto', Helvetica, Arial, Sans-Serif;
+}
+
+// input
+@mixin input {
+  border: 1px solid $color-blue;
+}
+
+//ease in n out
+@mixin ease {
+  -webkit-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+   -moz-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+     -o-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+        transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
+}
+
+//Media Queries
+/**
+ * Responsive mixin. The media breakpoints are as defined
+ * in the twitter bootstrap framework:
+ *
+ * - phone
+ * - tablet-portrait
+ * - tablet-landscape-desktop
+ * - large-desktop
+ *
+ * Additional parameters for tagetting retina and non-retina
+ * devices
+ *
+ * - retina
+ * - non-retina
+ *
+ * Moreover, a specific value in px can be passed which is
+ * used to generate a max-width media query.
+ */
+@mixin respond-to($media) {
+    /* Landscape phones and down */
+    @if $media == phone {
+        @media (min-width: 480px) { @content; }
+    }
+    /* Landscape phone to portrait tablet */
+    @else if $media == tablet-portrait {
+        @media (min-width: 768px) {@content; }
+    }
+    /* Portrait tablet to landscape and desktop */
+    @else if $media == tablet-landscape-desktop {
+        @media (min-width: 768px) and (min-width: 992px) { @content; }
+    }
+    /* Large desktop */
+    @else if $media == large-desktop {
+        @media (min-width: 1200px) { @content; }
+    }
+    // Non-Retina
+    @else if $media == non-retina {
+        @media screen and (-webkit-max-device-pixel-ratio: 1) { @content; }
+    }
+    // Retina Only
+    @else if $media == retina {
+        @media screen and (-webkit-min-device-pixel-ratio: 2) { @content; }
+    }
+    // Specific max width
+    @else {
+        @media only screen and (max-width: #{$media}px) { @content; }
+    }
+}
+
+
+// TRANSITION
+@mixin transition($what: all, $length: 1s, $easing: ease-in-out) {
+  transition: $what $length $easing;
+  -o-transition: $what $length $easing;
+  -webkit-transition: $what $length $easing;
+  -ms-transition: $what $length $easing;
+  transition: $what $length $easing;
+}
+
+// ROTATE
+@mixin rotate($deg) {
+  -moz-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+// ROTATE
+@mixin transform-origin($width, $height) {
+  -moz-transform-origin: $width $height;
+  -o-transform-origin: $width $height;
+  -webkit-transform-origin: $width $height;
+  -ms-transform-origin: $width $height;
+  transform-origin: $width $height;
+}
+//
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+  -webkit-box-shadow:inset $top $left $blur $color;
+  -moz-box-shadow:inset $top $left $blur $color;
+  box-shadow:inset $top $left $blur $color;
+  } @else {
+  -webkit-box-shadow: $top $left $blur $color;
+  -moz-box-shadow: $top $left $blur $color;
+  box-shadow: $top $left $blur $color;
+  }
+}
+
+
+// ANIMATION
+@mixin animation($value) {
+  -webkit-animation: unquote($value);
+     -moz-animation: unquote($value);
+       -o-animation: unquote($value);
+          animation: unquote($value);
+}
+
+@mixin animation-property($property, $value) {
+  -webkit-animation-#{$property}: unquote($value);
+     -moz-animation-#{$property}: unquote($value);
+       -o-animation-#{$property}: unquote($value);
+          animation-#{$property}: unquote($value);
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content; }
+     @-moz-keyframes #{$name} { @content; }
+       @-o-keyframes #{$name} { @content; }
+          @keyframes #{$name} { @content; }
+}

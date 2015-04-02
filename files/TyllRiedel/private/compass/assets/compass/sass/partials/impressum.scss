@@ -1,0 +1,13 @@
+#impressum,
+#datenschutz {
+  h2 {
+    color: $color-highlight;
+    margin: 0.5em 0 0 0;
+  }
+  a {
+    color: $color-highlight;
+    &:hover {
+      color: $color-highlight-dark;
+    }
+  }
+}

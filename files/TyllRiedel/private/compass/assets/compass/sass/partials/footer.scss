@@ -1,0 +1,54 @@
+#footer {
+  @include main-font;
+  z-index: 1;
+  color: $color-grey-light;
+  margin: 0 0 10px 0;
+  
+  a {
+    margin: 0 5px 0 0;
+    color: $color-highlight;
+    display: block;
+    text-transform: uppercase;
+    @include respond-to(phone) {
+      display: inline;
+    }
+    &:hover {
+      color: $color-highlight-dark;      
+    }
+    &.xing-footer {
+      &:hover {
+        color:#006464;
+      }
+    }
+    &.vimeo-footer {
+      &:hover {
+        color:#44BBFF;
+      }
+    }
+  }
+  .slash {
+    display: none;
+    @include respond-to(phone) {
+      display: inline;
+    }
+  }
+  
+  .mini-nav {
+    padding: 1em 0 0.5em 0;
+  }
+  
+  .totop {
+    float: right;
+    margin-top: -0.5em;
+  }
+}
+
+
+.footer {
+  padding: 0 15px;
+-webkit-box-shadow: inset 0px 6px 9px -6px rgba(56,56,56,0.7);
+-moz-box-shadow: inset 0px 6px 9px -6px rgba(56,56,56,0.7);
+box-shadow: inset 0px 6px 9px -6px rgba(56,56,56,0.7);
+  //border-top: 1px solid $color-grey-light;
+  margin-top: 2em;
+}

@@ -1,0 +1,65 @@
+*:focus {
+    outline:none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    background: white;
+}
+ 
+::-webkit-scrollbar-thumb {
+    //border-radius: 10px;
+    background: $color-highlight;
+    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+html {
+  ::selection {background: $color-highlight; color: #FFF;}
+  ::-moz-selection {background: $color-highlight; color: $color-white;}
+}
+
+p {
+  @include main-font;
+  font-weight: 400;
+}
+
+body {
+  word-spacing: 0.125em;
+  letter-spacing: 0.125em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  outline: none !important;
+  &:focus,
+  &:hover {
+    text-decoration: none !important;
+  }
+  &:active {
+    opacity: 0.75;
+  }
+}
+
+.invisible {
+  position:absolute;
+  left:-999px;
+  width:500px;
+}
+
+.shadow {
+  @include box-shadow(0, 0, 2px, #BBB, $inset: false);
+}
+
+//NO JS
+.no-js {
+  .shuffle-text {
+    display: none;
+  }
+}

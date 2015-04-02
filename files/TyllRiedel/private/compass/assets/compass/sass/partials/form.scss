@@ -1,0 +1,44 @@
+.login .formbody {
+  //display: none;
+}
+
+.formbody {
+  //padding: 20px 0;
+  
+  label {
+    display: block;
+    //margin: 0 0 5px 0;
+    //font-style: italic;
+    .mandatory {
+      color: $color-highlight;
+    }
+  }
+  
+  input, textarea {    
+    //border: 1px solid  $color-grey;
+    background: transparent;
+    color: $color-highlight-dark;
+    //font-style: italic;
+    //width: 100%;
+    //padding: 5px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  input {
+    //display: block;
+    //margin: 0 0 -15px 0;
+    width: 100%;
+    z-index: 1000;
+    &.submit {
+      border: none;
+      background: transparent;
+      //margin: 10px 0 0 0;
+      //width: 100%;
+    }
+  }
+  
+  textarea {
+    height: 150px;
+  }
+}
